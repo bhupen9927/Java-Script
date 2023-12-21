@@ -4,6 +4,29 @@
 console.log(3+3)
 console.log("Bhupendra Singh");
 
+let name="Bhuppi"
+let age=24
+let isLoggedIn=false
+
+//data Types
+/*
+number=>2 to power53
+bigint
+string=>""
+boolean=>true/false
+null=>standalone value, sign of empty value , example of temprature
+undefined=>
+symbol=>find uniqueness in react
+
+
+Object
+
+*/
+
+console.log(typeof null) //object
+console.log(typeof undefined)  //undefine d
+
+
 
 function one(){
     var name="bharat";
