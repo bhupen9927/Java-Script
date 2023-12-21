@@ -37,3 +37,27 @@ null=>object;
 Boolean=>Boolean;
 function=>object Function;
 */
+
+
+
+//***********************************MEMORy************** 
+//stact is use in Primitive data Types  (copy)
+//Heap ==> Non-Primitive                 (Reference)
+let myYT="bhuppiTech";
+let Another=myYT
+Another="BT"
+console.log(myYT)
+console.log(Another)
+
+//heap
+let userOne={
+    name:"bhupendra_Singh",
+    gmail:"bhuppi9927@gmail.com"
+}
+
+let userTwo= userOne;
+userTwo.gmail="bhupendrasingh32709@gmail.com";
+console.log(userOne.gmail);
+console.log(userTwo.gmail);
+
+
