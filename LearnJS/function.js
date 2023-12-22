@@ -32,3 +32,29 @@ function loginuserMessage(username){
 //console.log(loginuserMessage("Bhupendra SIngh"))
 console.log(loginuserMessage());
 //if doesen't provide any argument then print undefined
+
+//rest operator
+function calculateCartprice(...n){
+    return n
+}
+
+console.log(calculateCartprice(200,400,500,536));
+
+//pass object in a function
+const user={
+    name:"Bhupendra",
+    age:24
+}
+
+function handleObject(anyobject){
+    console.log(`user name is ${anyobject.name} and age is ${anyobject.age}`);
+}
+
+handleObject(user);
+
+//pass array in a function
+
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+console.log(returnSecondValue([100,200,300,400]));
