@@ -14,3 +14,38 @@ if(true){
 console.log("ouside of block",a);
 //console.log(b);
 console.log(c);
+
+
+//Nested  Scope
+
+function one(){
+    const username="Bhupendra"
+
+    function two(){
+        const website="youtube"
+        console.log(username);
+        console.log(website);
+    }
+    //console.log(website); webite can not be accessed by function one
+    // because of website store in the function two
+
+    two()
+}
+
+one()
+
+
+//************* */
+
+console.log("hoisting",addone(5));    //hoisting
+function addone(num){
+    return num+1;
+}
+
+
+
+//Expression 
+const addtwo= function(num){
+    return num+2;
+}
+console.log("5 increment two",addtwo(5));
