@@ -69,3 +69,37 @@ console.log(val1);
 
 const price=100
 price<=80 ? console.log("less than 80") : console.log("more than 80")
+
+
+
+//Switch Case
+let day = new Date().getDay();
+let dayName;
+
+switch (day) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Unknown";
+}
+
+console.log("Today is " + dayName);
