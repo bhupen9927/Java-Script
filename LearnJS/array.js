@@ -40,3 +40,42 @@ console.log("B-after slice original array",myArr);
 const myn2=myArr.splice(1,3);
 console.log("splice array",myn2);
 console.log("C-After Splice original array",myArr);
+
+
+//4th largest element in the array
+function findFourthLargest(arr) {
+    if (arr.length < 4) {
+      return "Array should have at least 4 elements";
+    }
+  
+    let first = arr[0];
+    let second = arr[0];
+    let third = arr[0];
+    let fourth = arr[0];
+  
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > first) {
+        fourth = third;
+        third = second;
+        second = first;
+        first = arr[i];
+      } else if (arr[i] > second && arr[i] !== first) {
+        fourth = third;
+        third = second;
+        second = arr[i];
+      } else if (arr[i] > third && arr[i] !== first && arr[i] !== second) {
+        fourth = third;
+        third = arr[i];
+      } else if (arr[i] > fourth && arr[i] !== first && arr[i] !== second && arr[i] !== third) {
+        fourth = arr[i];
+      }
+    }
+  
+    return fourth;
+  }
+  
+  // Example usage:
+  const arr = [12, 45, 1, 78, 54, 23, 56];
+  const fourthLargest = findFourthLargest(arr);
+  console.log("Fourth largest element:", fourthLargest);
+  
