@@ -116,3 +116,13 @@ set __proto__: ƒ __proto__()
 [[PrimitiveValue]]: "bhuppi"
 */
 
+// convert string to lower case
+let inputString = "BHupen";
+let lowerString = '';
+
+// Convert each character in the string to lowercase
+for (let i = 0; i < inputString.length; i++) {
+    lowerString += inputString[i].toLowerCase();
+}
+
+console.log("String in lowercase: " + lowerString);
