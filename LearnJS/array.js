@@ -78,4 +78,32 @@ function findFourthLargest(arr) {
   const arr = [12, 45, 1, 78, 54, 23, 56];
   const fourthLargest = findFourthLargest(arr);
   console.log("Fourth largest element:", fourthLargest);
+
+  //covert 1d array into 2d array
+
+  
+  function convertTo2DArray(arr, rows, columns) {
+    if (rows * columns !== arr.length) {
+        return "Cannot convert to a 2D array with the given rows and columns.";
+    }
+
+    let result = [];
+    for (let i = 0; i < rows; i++) {
+        result.push(arr.slice(i * columns, (i + 1) * columns));
+    }
+
+    return result;
+}
+
+// Example 1D array
+const oneDArray = [1, 2, 3, 4, 5, 6]; // Replace this array with your desired 1D array
+
+// Define the number of rows and columns for the 2D array
+const numberOfRows = 2;
+const numberOfColumns = 3;
+
+// Convert the 1D array to a 2D array
+const twoDArray = convertTo2DArray(oneDArray, numberOfRows, numberOfColumns);
+console.log(twoDArray);
+
   
