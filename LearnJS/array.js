@@ -106,4 +106,18 @@ const numberOfColumns = 3;
 const twoDArray = convertTo2DArray(oneDArray, numberOfRows, numberOfColumns);
 console.log(twoDArray);
 
+//sort the array
+// Sample array
+let arr = [5, 2, 9, 1, 5];
+
+// Sorting the array in ascending order
+arr.sort((a, b) => a - b);
+
+console.log("Sorted array in ascending order:", arr);
+// Sorting the array in descending order
+arr.sort((a, b) => b - a);
+
+console.log("Sorted array in descending order:", arr);
+
+
   
