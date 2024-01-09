@@ -108,7 +108,7 @@ console.log(twoDArray);
 
 //sort the array
 // Sample array
-let arr = [5, 2, 9, 1, 5];
+//let arr = [5, 2, 9, 1, 5];
 
 // Sorting the array in ascending order
 arr.sort((a, b) => a - b);
@@ -118,6 +118,71 @@ console.log("Sorted array in ascending order:", arr);
 arr.sort((a, b) => b - a);
 
 console.log("Sorted array in descending order:", arr);
+
+
+
+//create linkedlist 
+// Node class to represent individual nodes in the linked list
+class Node {
+  constructor(data) {
+    this.data = data; // Data stored in the node
+    this.next = null; // Pointer to the next node, initially set to null
+  }
+}
+
+// LinkedList class to manage the linked list
+class LinkedList {
+  constructor() {
+    this.head = null; // Points to the head of the list, initially set to null
+  }
+
+  // Method to add a new node to the end of the linked list
+  append(data) {
+    const newNode = new Node(data); // Create a new node with the given data
+
+    // If the list is empty, set the new node as the head
+
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+
+    // Traverse the list to find the last node
+    while (current.next !== null) {
+      current = current.next;
+    }
+
+    // Set the next of the last node to the new node
+    current.next = newNode;
+  }
+
+  // Method to print the linked list
+  printList() {
+    let current = this.head;
+    let result = "";
+
+    // Traverse the list and concatenate data to form a string
+    while (current !== null) {
+      result += current.data + " -> ";
+      current = current.next;
+    }
+
+    result += "null"; // Representing the end of the list
+    console.log(result);
+  }
+}
+
+// Creating a linked list and adding elements to it
+const linkedList = new LinkedList();
+linkedList.append(5);
+linkedList.append(10);
+linkedList.append(15);
+
+// Printing the linked list
+linkedList.printList(); // Output: 5 -> 10 -> 15 -> null
+
 
 
   
